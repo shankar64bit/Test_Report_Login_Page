@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "186099519559",
+    "project_id": "testreportloginpage",
+    "storage_bucket": "testreportloginpage.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186099519559:android:abc42e4bf55d263e352162",
+        "android_client_info": {
+          "package_name": "com.testreportsignin.testreportsignin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "186099519559-u8o8bbo3e1eik3i58aig9evsbqhub35j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.testreportsignin.testreportsignin",
+            "certificate_hash": "9f7cb407ed51610cd68e92cfac781045a4cbea94"
+          }
+        },
+        {
+          "client_id": "186099519559-2ralpmkqddpj1lmesjkub6dv5dakqh67.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEGtGtdlLh2eUYoWUq6fTvi5qmHqfqkF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "186099519559-2ralpmkqddpj1lmesjkub6dv5dakqh67.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
