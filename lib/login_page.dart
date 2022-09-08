@@ -28,7 +28,9 @@ class _LoginPageState extends State<LoginPage> {
   loginUI() {
     return Consumer<GoogleSignInController>(builder: (context, model, child) {
       if (model.googleAccount != null) {
-        return Center(child: LoggedInUI(model));
+        return Center(
+            child:
+                LoggedInUI(model)); //Test report main page App should come here
       } else {
         return loginControl(context);
       }
