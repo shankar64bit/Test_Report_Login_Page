@@ -21,10 +21,9 @@ class MyApp extends StatelessWidget {
           )
         ],
         child: MaterialApp(
-          title: 'flutterDemo',
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-          ),
+          debugShowCheckedModeBanner: false,
+          title: 'TestReportLogin',
+          theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Robo'),
           home: LoginPage(),
         ));
   }

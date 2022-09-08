@@ -16,9 +16,12 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Social Login'),
+        backgroundColor: Colors.red[900],
+        title: Text('Test-Report-Sign-In-Page', style: TextStyle(fontSize: 23)),
+        centerTitle: true,
       ),
       body: loginUI(),
+      backgroundColor: Colors.grey[200],
     );
   }
 
@@ -33,26 +36,29 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   LoggedInUI(GoogleSignInController model) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.end,
-      children: [
-        CircleAvatar(
-          backgroundImage:
-              Image.network(model.googleAccount!.photoUrl ?? '').image,
-          radius: 50,
-        ),
-        Text(model.googleAccount!.displayName ?? ''),
-        Text(model.googleAccount!.email),
-        ActionChip(
-          avatar: Icon(Icons.logout),
-          label: Text('Logout'),
-          onPressed: (() {
-            Provider.of<GoogleSignInController>(context, listen: false)
-                .logout();
-          }),
-        )
-      ],
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
+      child: Column(
+        // mainAxisAlignment: MainAxisAlignment.start,
+        // crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CircleAvatar(
+            backgroundImage:
+                Image.network(model.googleAccount!.photoUrl ?? '').image,
+            radius: 30,
+          ),
+          Text(model.googleAccount!.displayName ?? ''),
+          Text(model.googleAccount!.email),
+          ActionChip(
+            avatar: Icon(Icons.logout),
+            label: Text('Logout'),
+            onPressed: (() {
+              Provider.of<GoogleSignInController>(context, listen: false)
+                  .logout();
+            }),
+          )
+        ],
+      ),
     );
   }
 
@@ -62,13 +68,14 @@ class _LoginPageState extends State<LoginPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           GestureDetector(
-            child: Image.asset('images/google-logo.png', width: 250),
+            child: Image.asset('images/google-logo.png', width: 200),
             onTap: () {
               Provider.of<GoogleSignInController>(context, listen: false)
                   .login();
             },
           ),
-          Image.asset('images/fb-logo.png', width: 250),
+          Divider(height: 30),
+          Image.asset('images/fb-logo.png', width: 200),
         ],
       ),
     );
