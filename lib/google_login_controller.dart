@@ -5,12 +5,12 @@ class GoogleSignInController with ChangeNotifier {
   var _googleSignIn = GoogleSignIn();
   GoogleSignInAccount? googleAccount;
 
-  login() async {
+  void login() async {
     this.googleAccount = await _googleSignIn.signIn();
     notifyListeners();
   }
 
-  logout() async {
+  void logout() async {
     this.googleAccount = await _googleSignIn.signOut();
     notifyListeners();
   }
